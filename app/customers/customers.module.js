@@ -10,7 +10,9 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var common_1 = require('@angular/common');
+var forms_1 = require('@angular/forms');
 var customers_component_1 = require('./customers.component');
+var customer_add_component_1 = require('./customer-add/customer-add.component');
 var customers_service_1 = require('./customers.service');
 var customers_routing_1 = require('./customers.routing');
 var CustomersModule = (function () {
@@ -20,15 +22,20 @@ var CustomersModule = (function () {
         core_1.NgModule({
             imports: [
                 common_1.CommonModule,
+                forms_1.FormsModule,
                 customers_routing_1.customersRouting
             ],
             declarations: [
-                customers_component_1.CustomersComponent
+                customers_component_1.CustomersComponent,
+                customer_add_component_1.CustomerAddComponent
             ],
             providers: [
                 customers_service_1.CustomersService
             ],
-            exports: [customers_component_1.CustomersComponent]
+            exports: [
+                customers_component_1.CustomersComponent,
+                customer_add_component_1.CustomerAddComponent
+            ]
         }), 
         __metadata('design:paramtypes', [])
     ], CustomersModule);

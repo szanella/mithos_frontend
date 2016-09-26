@@ -1,6 +1,21 @@
-<h2>Customers</h2>
-<ul>
-    <li *ngFor="let customer of customers">
-        {{customer.name}} {{customer.surname}}
-    </li>
-</ul>
+<div class="section">
+    <h5 class="left">Customers</h5>
+    <a routerLink="/customers/add" class="waves-effect waves-light btn right"><i class="material-icons right">add</i>Add Customer</a>
+    <table class="bordered highlight">
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Surname</th>
+            <th>Performances</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        <tr *ngFor="let customer of customers">
+            <td>{{customer.name}}</td>
+            <td>{{customer.surname}}</td>
+            <td>{{customer.performances.length}}</td>
+        </tr>
+        </tbody>
+    </table>
+</div>

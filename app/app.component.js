@@ -15,7 +15,8 @@ var AppComponent = (function () {
     AppComponent = __decorate([
         core_1.Component({
             selector: 'mithos',
-            templateUrl: 'app/app.component.html'
+            templateUrl: 'app/app.component.html',
+            styleUrls: ['app/style.scss']
         }), 
         __metadata('design:paramtypes', [])
     ], AppComponent);

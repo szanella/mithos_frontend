@@ -15,12 +15,20 @@ var CustomersService = (function () {
     function CustomersService(http) {
         this.http = http;
         this.customersUrl = 'http://localhost:3001/api/customers';
+        this.headers = new http_1.Headers({ 'Content-Type': 'application/json' });
     }
     CustomersService.prototype.getCustomers = function () {
         return this.http
             .get(this.customersUrl)
             .toPromise()
             .then(function (response) { return response.json().customers; })
+            .catch(this.handleError);
+    };
+    CustomersService.prototype.saveCustomer = function (customer) {
+        return this.http
+            .post(this.customersUrl, JSON.stringify(customer), { headers: this.headers })
+            .toPromise()
+            .then(function (response) { return response.json(); })
             .catch(this.handleError);
     };
     CustomersService.prototype.handleError = function (error) {
