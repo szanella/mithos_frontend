@@ -1,1 +1,0 @@
-# mithos_frontend
