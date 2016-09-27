@@ -1,0 +1,36 @@
+{
+  "customers": {
+    "title": "Customers",
+    "customersTable": {
+      "name": "Name",
+      "surname": "Surname",
+      "performances": "Performances"
+    },
+    "addCustomerButton": "Add Customer"
+  },
+  "customer": {
+    "performance": "Performance",
+    "date": "Date",
+    "notes": "Notes",
+    "editButton": "Edit",
+    "edit": {
+      "title": {
+        "edit": "Edit Customer",
+        "add": "Add Customer"
+      },
+      "name": "Name",
+      "surname": "Surname"
+    }
+  },
+  "header": {
+    "languageSelection": {
+      "language": "Language",
+      "italian": "Italian",
+      "english": "English"
+    }
+  },
+  "leftnav": {
+    "customers": "Customers",
+    "performances": "Performances"
+  }
+}

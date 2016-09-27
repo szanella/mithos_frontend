@@ -1,6 +1,7 @@
 import { NgModule }       from '@angular/core';
 import { CommonModule }   from '@angular/common';
 import { FormsModule }      from '@angular/forms';
+import { TranslateModule }  from 'ng2-translate/ng2-translate';
 
 import { CustomersComponent }   from './customers.component';
 import { CustomerComponent }   from './customer/customer.component';
@@ -13,7 +14,8 @@ import { customersRouting }   from './customers.routing';
   imports:      [
     CommonModule,
     FormsModule,
-    customersRouting
+    customersRouting,
+    TranslateModule.forRoot()
   ],
   declarations: [
     CustomersComponent,

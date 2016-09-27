@@ -1,16 +1,16 @@
 <div class="row">
     <div class="col s12">
         <h5 class="left">{{customer.name}} {{customer.surname}}</h5>
-        <a (click)="gotoEdit()" class="waves-effect waves-light btn right"><i class="material-icons right">mode_edit</i>Edit</a>
+        <a (click)="gotoEdit()" class="waves-effect waves-light btn right"><i class="material-icons right">mode_edit</i>{{ 'customer.editButton' | translate }}</a>
     </div>
 </div>
 <div class="row">
     <table class="col s12 bordered highlight">
         <thead>
         <tr>
-            <th>Performance</th>
-            <th>Date</th>
-            <th>Notes</th>
+            <th>{{ 'customer.performance' | translate }}</th>
+            <th>{{ 'customer.date' | translate }}</th>
+            <th>{{ 'customer.notes' | translate }}</th>
         </tr>
         </thead>
         <tbody>

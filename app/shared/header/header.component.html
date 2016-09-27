@@ -1,7 +1,14 @@
+<ul id="language" class="dropdown-content">
+    <li><a (click)="switchLanguage('it')">{{ 'header.languageSelection.italian' | translate }}</a></li>
+    <li><a (click)="switchLanguage('en')">{{ 'header.languageSelection.english' | translate }}</a></li>
+</ul>
 <nav class="light-blue">
     <div class="nav-wrapper">
         <div class="col s12">
             <a routerLink="/" class="brand-logo">Mithos</a>
         </div>
+        <ul class="right">
+            <li><a class="dropdown-button" data-activates="language">{{ 'header.languageSelection.language' | translate }}<i class="material-icons right">arrow_drop_down</i></a></li>
+        </ul>
     </div>
 </nav>

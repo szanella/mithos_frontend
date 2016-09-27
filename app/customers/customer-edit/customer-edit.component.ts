@@ -11,6 +11,7 @@ import { Customer }           from "../customer";
 
 export class CustomerEditComponent implements OnInit {
   @Input() customer: Customer;
+  isUpdate: boolean;
 
   constructor(
     private customersService: CustomersService,
@@ -18,6 +19,15 @@ export class CustomerEditComponent implements OnInit {
     private route: ActivatedRoute
   ) {
     this.customer = new Customer();
+    this.route.params.forEach((params: Params) => {
+      let id = +params['id'];
+      if (id) {
+        this.isUpdate = true;
+      }
+      else {
+        this.isUpdate = false;
+      }
+    });
   }
 
   ngOnInit(): void {

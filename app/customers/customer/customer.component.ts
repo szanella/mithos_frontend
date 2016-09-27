@@ -24,7 +24,6 @@ export class CustomerComponent implements OnInit {
       let id = +params['id'];
       this.customersService.getCustomer(id)
         .then(customer => {
-          console.log(customer);
           this.customer = customer;
         });
     });

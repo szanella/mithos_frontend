@@ -1,17 +1,17 @@
 <div class="section">
     <div class="row">
         <div class="col s12">
-            <h5 class="left">Customers</h5>
-            <a routerLink="/customers/add" class="waves-effect waves-light btn right"><i class="material-icons right">add</i>Add Customer</a>
+            <h5 class="left">{{ 'customers.title' | translate }}</h5>
+            <a routerLink="/customers/add" class="waves-effect waves-light btn right"><i class="material-icons right">add</i>{{ 'customers.addCustomerButton' | translate }}</a>
         </div>
     </div>
     <div class="row">
         <table class="col s12 bordered highlight">
             <thead>
             <tr>
-                <th>Name</th>
-                <th>Surname</th>
-                <th>Performances</th>
+                <th>{{ 'customers.customersTable.name' | translate }}</th>
+                <th>{{ 'customers.customersTable.surname' | translate }}</th>
+                <th>{{ 'customers.customersTable.performances' | translate }}</th>
             </tr>
             </thead>
 

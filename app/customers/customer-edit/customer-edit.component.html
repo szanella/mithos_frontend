@@ -2,27 +2,28 @@
     <form class="col s12">
         <div class="row">
             <div class="col s12">
-                <h5 class="left">Add Customer</h5>
+                <h5 class="left" *ngIf="!isUpdate">{{ 'customer.edit.title.add' | translate }}</h5>
+                <h5 class="left" *ngIf="isUpdate">{{ 'customer.edit.title.edit' | translate }}</h5>
                 <a (click)="saveCustomer()"><i class="material-icons right medium icon-clickable">done</i></a>
                 <a (click)="goBack()"><i class="material-icons right medium icon-clickable">close</i></a>
             </div>
         </div>
         <div class="row">
             <div class="input-field col s12">
-                <input placeholder="Name"
+                <input placeholder="{{ 'customer.edit.name' | translate }}"
                        id="name"
                        name="name"
                        type="text"
                        [(ngModel)]="customer.name">
-                <label for="name" [class.active]="customer.id">Name</label>
+                <label for="name" [class.active]="isUpdate">{{ 'customer.edit.name' | translate }}</label>
             </div>
             <div class="input-field col s12">
-                <input placeholder="Surname"
+                <input placeholder="{{ 'customer.edit.surname' | translate }}"
                        id="surname"
                        name="surname"
                        type="text"
                        [(ngModel)]="customer.surname">
-                <label for="surname" [class.active]="customer.id">Surname</label>
+                <label for="surname" [class.active]="isUpdate">{{ 'customer.edit.surname' | translate }}</label>
             </div>
         </div>
     </form>

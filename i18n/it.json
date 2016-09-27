@@ -1,0 +1,36 @@
+{
+  "customers": {
+    "title": "Clienti",
+    "customersTable": {
+      "name": "Nome",
+      "surname": "Cognome",
+      "performances": "Prestazioni"
+    },
+    "addCustomerButton": "Aggiungi Cliente"
+  },
+  "customer": {
+    "performance": "Prestazione",
+    "date": "Data",
+    "notes": "Notea",
+    "editButton": "Modifica",
+    "edit": {
+      "title": {
+        "edit": "Modifica Cliente",
+        "add": "Aggiungi Cliente"
+      },
+      "name": "Nome",
+      "surname": "Cognome"
+    }
+  },
+  "header": {
+    "languageSelection": {
+      "language": "Lingua",
+      "italian": "Italiano",
+      "english": "Inglese"
+    }
+  },
+  "leftnav": {
+    "customers": "Clienti",
+    "performances": "Prestazioni"
+  }
+}
