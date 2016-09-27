@@ -9,12 +9,20 @@
         </div>
         <div class="row">
             <div class="input-field col s12">
-                <input placeholder="Name" id="name" name="name" type="text" [(ngModel)]="customer.name">
-                <label for="name">Name</label>
+                <input placeholder="Name"
+                       id="name"
+                       name="name"
+                       type="text"
+                       [(ngModel)]="customer.name">
+                <label for="name" [class.active]="customer.id">Name</label>
             </div>
             <div class="input-field col s12">
-                <input placeholder="Surname" id="surname" name="surname" type="text" [(ngModel)]="customer.surname">
-                <label for="surname">Surname</label>
+                <input placeholder="Surname"
+                       id="surname"
+                       name="surname"
+                       type="text"
+                       [(ngModel)]="customer.surname">
+                <label for="surname" [class.active]="customer.id">Surname</label>
             </div>
         </div>
     </form>

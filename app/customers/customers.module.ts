@@ -3,7 +3,8 @@ import { CommonModule }   from '@angular/common';
 import { FormsModule }      from '@angular/forms';
 
 import { CustomersComponent }   from './customers.component';
-import { CustomerAddComponent } from './customer-add/customer-add.component';
+import { CustomerComponent }   from './customer/customer.component';
+import { CustomerEditComponent } from './customer-edit/customer-edit.component';
 import { CustomersService }     from './customers.service';
 
 import { customersRouting }   from './customers.routing';
@@ -16,14 +17,16 @@ import { customersRouting }   from './customers.routing';
   ],
   declarations: [
     CustomersComponent,
-    CustomerAddComponent
+    CustomerComponent,
+    CustomerEditComponent
   ],
   providers: [
     CustomersService
   ],
   exports: [
     CustomersComponent,
-    CustomerAddComponent
+    CustomerComponent,
+    CustomerEditComponent
   ]
 })
 export class CustomersModule {

@@ -1,17 +1,20 @@
-import { Component, OnInit }      from '@angular/core';
+import { Component, OnInit }  from '@angular/core';
+import { Router }             from '@angular/router';
 
-import { Customer }       from './customer';
-import { CustomersService }        from './customers.service';
+import { Customer }           from './customer';
+import { CustomersService }   from './customers.service';
 
 @Component({
   selector: 'customers',
-  templateUrl: 'app/customers/customers.component.html'
+  templateUrl: 'app/customers/customers.component.html',
+  styleUrls: ['app/customers/customers.component.scss']
 })
 export class CustomersComponent implements OnInit {
   customers: Customer[];
 
   constructor(
-    private customersService: CustomersService
+    private customersService: CustomersService,
+    private router: Router
   ) { }
 
   ngOnInit(): void {
@@ -23,5 +26,10 @@ export class CustomersComponent implements OnInit {
       .then(customers => {
         this.customers = customers
       });
+  }
+
+  gotoCustomer(customer): void {
+    let link = ['/customers', customer.id];
+    this.router.navigate(link);
   }
 }

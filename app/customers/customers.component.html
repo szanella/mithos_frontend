@@ -1,21 +1,27 @@
 <div class="section">
-    <h5 class="left">Customers</h5>
-    <a routerLink="/customers/add" class="waves-effect waves-light btn right"><i class="material-icons right">add</i>Add Customer</a>
-    <table class="bordered highlight">
-        <thead>
-        <tr>
-            <th>Name</th>
-            <th>Surname</th>
-            <th>Performances</th>
-        </tr>
-        </thead>
+    <div class="row">
+        <div class="col s12">
+            <h5 class="left">Customers</h5>
+            <a routerLink="/customers/add" class="waves-effect waves-light btn right"><i class="material-icons right">add</i>Add Customer</a>
+        </div>
+    </div>
+    <div class="row">
+        <table class="col s12 bordered highlight">
+            <thead>
+            <tr>
+                <th>Name</th>
+                <th>Surname</th>
+                <th>Performances</th>
+            </tr>
+            </thead>
 
-        <tbody>
-        <tr *ngFor="let customer of customers">
-            <td>{{customer.name}}</td>
-            <td>{{customer.surname}}</td>
-            <td>{{customer.performances.length}}</td>
-        </tr>
-        </tbody>
-    </table>
+            <tbody>
+            <tr *ngFor="let customer of customers" (click)="gotoCustomer(customer)" class="customer-row">
+                <td>{{customer.name}}</td>
+                <td>{{customer.surname}}</td>
+                <td>{{customer.performances.length}}</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
 </div>

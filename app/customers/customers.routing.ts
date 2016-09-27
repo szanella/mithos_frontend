@@ -2,7 +2,8 @@ import { ModuleWithProviders }    from '@angular/core';
 import { Routes, RouterModule }   from '@angular/router';
 
 import { CustomersComponent }     from './customers.component';
-import { CustomerAddComponent }   from './customer-add/customer-add.component';
+import { CustomerComponent }     from './customer/customer.component';
+import { CustomerEditComponent }   from './customer-edit/customer-edit.component';
 
 const customersRoutes: Routes = [
   {
@@ -14,7 +15,15 @@ const customersRoutes: Routes = [
       },
       {
         path: 'add',
-        component: CustomerAddComponent
+        component: CustomerEditComponent
+      },
+      {
+        path: ':id',
+        component: CustomerComponent
+      },
+      {
+        path: 'edit/:id',
+        component: CustomerEditComponent
       }
     ]
   }
