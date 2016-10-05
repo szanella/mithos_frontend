@@ -30,7 +30,12 @@ export class CustomerComponent implements OnInit {
   }
 
   gotoEdit(): void {
-    let link = ['/customers/edit', this.customer.id];
+    let link = ['/customers', this.customer.id, 'edit'];
+    this.router.navigate(link);
+  }
+
+  addPerformance(): void {
+    let link = ['/customers', this.customer.id, 'addperformance'];
     this.router.navigate(link);
   }
 }

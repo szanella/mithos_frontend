@@ -6,6 +6,7 @@ import { TranslateModule }  from 'ng2-translate/ng2-translate';
 
 import { HeaderComponent }      from './header/header.component';
 import { LeftnavComponent }     from './leftnav/leftnav.component';
+import { BreadcrumbsComponent } from './breadcrumbs/breadcrumbs.component';
 
 @NgModule({
   imports:      [
@@ -16,11 +17,13 @@ import { LeftnavComponent }     from './leftnav/leftnav.component';
   ],
   declarations: [
     HeaderComponent,
-    LeftnavComponent
+    LeftnavComponent,
+    BreadcrumbsComponent
   ],
   exports:      [
     HeaderComponent,
-    LeftnavComponent
+    LeftnavComponent,
+    BreadcrumbsComponent
   ]
 })
 export class SharedModule { }

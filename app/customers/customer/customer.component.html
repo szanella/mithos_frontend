@@ -1,9 +1,22 @@
 <div class="row">
     <div class="col s12">
         <h5 class="left">{{customer.name}} {{customer.surname}}</h5>
-        <a (click)="gotoEdit()" class="waves-effect waves-light btn right"><i class="material-icons right">mode_edit</i>{{ 'customer.editButton' | translate }}</a>
+        <div class="right hide-on-small-only">
+            <a (click)="gotoEdit()" class="waves-effect waves-light btn"><i class="material-icons right">mode_edit</i>{{ 'customer.editButton' | translate }}</a>
+            <a (click)="addPerformance()" class="waves-effect waves-light btn"><i class="material-icons right">add</i>{{ 'customer.addPerformanceButton' | translate }}</a>
+        </div>
     </div>
 </div>
+<!-- Mobile buttons -->
+<div class="hide-on-med-and-up">
+    <div class="row">
+        <a (click)="gotoEdit()" class="waves-effect waves-light btn col s12"><i class="material-icons right">mode_edit</i>{{ 'customer.editButton' | translate }}</a>
+    </div>
+    <div class="row">
+        <a (click)="addPerformance()" class="waves-effect waves-light btn col s12"><i class="material-icons right">add</i>{{ 'customer.addPerformanceButton' | translate }}</a>
+    </div>
+</div>
+
 <div class="row">
     <table class="col s12 bordered highlight">
         <thead>
@@ -17,7 +30,7 @@
         <tr *ngFor="let performance of customer.performances">
             <td>{{performance.service.description}}</td>
             <td>{{performance.date}}</td>
-            <td>{{performance.notes}}</td>
+            <td class="truncate">{{performance.notes}}</td>
         </tr>
         </tbody>
     </table>

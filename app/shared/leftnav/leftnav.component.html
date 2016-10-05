@@ -1,4 +1,10 @@
 <div class="collection">
-    <a routerLink="/customers" class="collection-item">{{ 'leftnav.customers' | translate }}<span class="secondary-content"><i class="material-icons">contacts</i></span></a>
-    <a routerLink="/performances" class="collection-item">{{ 'leftnav.performances' | translate }}<span class="secondary-content"><i class="material-icons">list</i></span></a>
+    <a *ngFor="let link of links"
+       routerLink="{{link.route}}"
+       [routerLinkActive]="['active']"
+       class="collection-item">
+
+        {{ link.label | translate }}
+        <span class="secondary-content"><i class="material-icons">{{link.icon}}</i></span>
+    </a>
 </div>

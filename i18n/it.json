@@ -11,7 +11,8 @@
   "customer": {
     "performance": "Prestazione",
     "date": "Data",
-    "notes": "Notea",
+    "notes": "Note",
+    "addPerformanceButton": "Nuova Prestazione",
     "editButton": "Modifica",
     "edit": {
       "title": {
@@ -20,6 +21,21 @@
       },
       "name": "Nome",
       "surname": "Cognome"
+    },
+    "performances": {
+      "add": {
+        "title": "Aggiunti Prestazione",
+        "service": "Servizio",
+        "notes": "Note"
+      }
+    }
+  },
+  "services": {
+    "title": "Servizi",
+    "addServiceButton": "Aggiungi Servizio",
+    "servicesTable": {
+      "description": "Descrizione",
+      "price": "Prezzo"
     }
   },
   "header": {
@@ -31,6 +47,16 @@
   },
   "leftnav": {
     "customers": "Clienti",
+    "services": "Servizi",
     "performances": "Prestazioni"
+  },
+  "breadcrumb": {
+    "customers": "Clienti",
+    "customersSection": {
+      "add": "Aggiungi",
+      "edit": "Modifica",
+      "addPerformance": "Aggiungi Prestazione"
+    },
+    "services": "Servizi"
   }
 }

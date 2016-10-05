@@ -6,6 +6,8 @@ import { TranslateModule }  from 'ng2-translate/ng2-translate';
 import { AppComponent }     from "./app.component";
 
 import { CustomersModule }  from './customers/customers.module';
+import { ServicesModule }   from './services/services.module';
+import { PerformancesModule } from './performances/performances.module';
 import { SharedModule }  from './shared/shared.module';
 
 import { routing }    from './app.routing';
@@ -15,6 +17,8 @@ import { routing }    from './app.routing';
     BrowserModule,
     FormsModule,
     CustomersModule,
+    ServicesModule,
+    PerformancesModule,
     SharedModule,
     HttpModule,
     TranslateModule.forRoot(),

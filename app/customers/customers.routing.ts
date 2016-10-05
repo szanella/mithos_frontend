@@ -4,10 +4,14 @@ import { Routes, RouterModule }   from '@angular/router';
 import { CustomersComponent }     from './customers.component';
 import { CustomerComponent }     from './customer/customer.component';
 import { CustomerEditComponent }   from './customer-edit/customer-edit.component';
+import { CustomerAddPerformanceComponent }  from './customer-add-performance/customer-add-performance.component';
 
 const customersRoutes: Routes = [
   {
     path: 'customers',
+    data: {
+      breadcrumb: 'breadcrumb.customers'
+    },
     children: [
       {
         path: '',
@@ -15,15 +19,38 @@ const customersRoutes: Routes = [
       },
       {
         path: 'add',
-        component: CustomerEditComponent
+        component: CustomerEditComponent,
+        data: {
+          breadcrumb: 'breadcrumb.customersSection.add'
+        }
       },
       {
         path: ':id',
-        component: CustomerComponent
-      },
-      {
-        path: 'edit/:id',
-        component: CustomerEditComponent
+        data: {
+          paramBreadcrumb: 'id'
+        },
+        children: [
+          {
+            path: '',
+            component: CustomerComponent
+          },
+          {
+            path: 'edit',
+            component: CustomerEditComponent,
+            data: {
+              breadcrumb: 'breadcrumb.customersSection.edit',
+              paramBreadcrumb: ''
+            }
+          },
+          {
+            path: 'addperformance',
+            component: CustomerAddPerformanceComponent,
+            data: {
+              breadcrumb: 'breadcrumb.customersSection.addPerformance',
+              paramBreadcrumb: ''
+            }
+          }
+        ]
       }
     ]
   }

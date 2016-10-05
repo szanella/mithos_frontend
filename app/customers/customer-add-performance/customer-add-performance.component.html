@@ -1,0 +1,25 @@
+<div class="row">
+    <form class="col s12">
+        <div class="row">
+            <div class="col s12">
+                <h5 class="left">{{ 'customer.performances.add.title' | translate }}</h5>
+                <a (click)="savePerformance()"><i class="material-icons right medium icon-clickable">done</i></a>
+                <a (click)="goBack()"><i class="material-icons right medium icon-clickable">close</i></a>
+            </div>
+            <div class="row">
+                <div class="col s12">
+                    <label>{{ 'customer.performances.add.service' | translate }}</label>
+                    <select class="browser-default" [(ngModel)]="performance.service.id" name="service">
+                        <option *ngFor="let service of services" value="{{service.id}}">{{service.description}}</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <textarea id="notes" name="notes" class="materialize-textarea" [(ngModel)]="performance.notes"></textarea>
+                    <label for="notes">{{ 'customer.performances.add.notes' | translate }}</label>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

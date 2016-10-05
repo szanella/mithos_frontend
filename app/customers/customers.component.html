@@ -1,27 +1,25 @@
-<div class="section">
-    <div class="row">
-        <div class="col s12">
-            <h5 class="left">{{ 'customers.title' | translate }}</h5>
-            <a routerLink="/customers/add" class="waves-effect waves-light btn right"><i class="material-icons right">add</i>{{ 'customers.addCustomerButton' | translate }}</a>
-        </div>
+<div class="row">
+    <div class="col s12">
+        <h5 class="left">{{ 'customers.title' | translate }}</h5>
+        <a routerLink="/customers/add" class="waves-effect waves-light btn right"><i class="material-icons right">add</i>{{ 'customers.addCustomerButton' | translate }}</a>
     </div>
-    <div class="row">
-        <table class="col s12 bordered highlight">
-            <thead>
-            <tr>
-                <th>{{ 'customers.customersTable.name' | translate }}</th>
-                <th>{{ 'customers.customersTable.surname' | translate }}</th>
-                <th>{{ 'customers.customersTable.performances' | translate }}</th>
-            </tr>
-            </thead>
+</div>
+<div class="row">
+    <table class="col s12 bordered highlight">
+        <thead>
+        <tr>
+            <th>{{ 'customers.customersTable.name' | translate }}</th>
+            <th>{{ 'customers.customersTable.surname' | translate }}</th>
+            <th>{{ 'customers.customersTable.performances' | translate }}</th>
+        </tr>
+        </thead>
 
-            <tbody>
-            <tr *ngFor="let customer of customers" (click)="gotoCustomer(customer)" class="customer-row">
-                <td>{{customer.name}}</td>
-                <td>{{customer.surname}}</td>
-                <td>{{customer.performances.length}}</td>
-            </tr>
-            </tbody>
-        </table>
-    </div>
+        <tbody>
+        <tr *ngFor="let customer of customers" (click)="gotoCustomer(customer)" class="index-table-row">
+            <td>{{customer.name}}</td>
+            <td>{{customer.surname}}</td>
+            <td>{{customer.performances.length}}</td>
+        </tr>
+        </tbody>
+    </table>
 </div>

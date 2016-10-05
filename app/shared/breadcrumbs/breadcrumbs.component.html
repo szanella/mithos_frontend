@@ -1,0 +1,12 @@
+<nav>
+    <div class="nav-wrapper light-blue lighten-2">
+        <div class="col s12">
+            <a *ngFor="let breadcrumb of breadcrumbs"
+               routerLink="{{breadcrumb.url}}"
+               class="breadcrumb">
+
+                {{ breadcrumb.label | translate }}
+            </a>
+        </div>
+    </div>
+</nav>

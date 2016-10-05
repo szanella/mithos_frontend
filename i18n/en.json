@@ -12,6 +12,7 @@
     "performance": "Performance",
     "date": "Date",
     "notes": "Notes",
+    "addPerformanceButton": "Add Performance",
     "editButton": "Edit",
     "edit": {
       "title": {
@@ -20,6 +21,21 @@
       },
       "name": "Name",
       "surname": "Surname"
+    },
+    "performances": {
+      "add": {
+        "title": "Add Performance",
+        "service": "Service",
+        "notes": "Notes"
+      }
+    }
+  },
+  "services": {
+    "title": "Services",
+    "addServiceButton": "Add Service",
+    "servicesTable": {
+      "description": "Description",
+      "price": "Price"
     }
   },
   "header": {
@@ -31,6 +47,16 @@
   },
   "leftnav": {
     "customers": "Customers",
+    "services": "Services",
     "performances": "Performances"
+  },
+  "breadcrumb": {
+    "customers": "Customers",
+    "customersSection": {
+      "add": "Add",
+      "edit": "Edit",
+      "addPerformance": "Add Performance"
+    },
+    "services": "Services"
   }
 }

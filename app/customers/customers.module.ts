@@ -6,6 +6,7 @@ import { TranslateModule }  from 'ng2-translate/ng2-translate';
 import { CustomersComponent }   from './customers.component';
 import { CustomerComponent }   from './customer/customer.component';
 import { CustomerEditComponent } from './customer-edit/customer-edit.component';
+import { CustomerAddPerformanceComponent } from './customer-add-performance/customer-add-performance.component';
 import { CustomersService }     from './customers.service';
 
 import { customersRouting }   from './customers.routing';
@@ -20,7 +21,8 @@ import { customersRouting }   from './customers.routing';
   declarations: [
     CustomersComponent,
     CustomerComponent,
-    CustomerEditComponent
+    CustomerEditComponent,
+    CustomerAddPerformanceComponent
   ],
   providers: [
     CustomersService
@@ -28,7 +30,8 @@ import { customersRouting }   from './customers.routing';
   exports: [
     CustomersComponent,
     CustomerComponent,
-    CustomerEditComponent
+    CustomerEditComponent,
+    CustomerAddPerformanceComponent
   ]
 })
 export class CustomersModule {

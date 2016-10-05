@@ -1,0 +1,23 @@
+<div class="row">
+    <div class="col s12">
+        <h5 class="left">{{ 'services.title' | translate }}</h5>
+        <a routerLink="/services/add" class="waves-effect waves-light btn right"><i class="material-icons right">add</i>{{ 'services.addServiceButton' | translate }}</a>
+    </div>
+</div>
+<div class="row">
+    <table class="col s12 bordered highlight">
+        <thead>
+        <tr>
+            <th>{{ 'services.servicesTable.description' | translate }}</th>
+            <th>{{ 'services.servicesTable.price' | translate }}</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        <tr *ngFor="let service of services" (click)="gotoService(service)" class="index-table-row">
+            <td>{{service.description}}</td>
+            <td>{{service.formatted_price}}</td>
+        </tr>
+        </tbody>
+    </table>
+</div>

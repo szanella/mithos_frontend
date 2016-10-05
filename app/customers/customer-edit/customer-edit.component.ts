@@ -43,7 +43,14 @@ export class CustomerEditComponent implements OnInit {
   }
 
   goBack(): void {
-    this.router.navigate(['/customers']);
+    let link;
+    if(this.isUpdate) {
+      link = ['/customers', this.customer.id]
+    }
+    else {
+      link = ['/customers']
+    }
+    this.router.navigate(link);
   }
 
   saveCustomer(): void {
