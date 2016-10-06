@@ -38,6 +38,15 @@
       "price": "Price"
     }
   },
+  "service": {
+    "editButton": "Edit",
+    "price": "Price",
+    "performancesTable": {
+      "title": "Performances",
+      "customer": "Customer",
+      "date": "Date"
+    }
+  },
   "header": {
     "languageSelection": {
       "language": "Language",

@@ -2,6 +2,7 @@ import { ModuleWithProviders }    from '@angular/core';
 import { Routes, RouterModule }   from '@angular/router';
 
 import { ServicesComponent }     from './services.component';
+import { ServiceComponent } from "./service/service.component";
 
 const servicesRoutes: Routes = [
   {
@@ -13,6 +14,13 @@ const servicesRoutes: Routes = [
       {
         path: '',
         component: ServicesComponent
+      },
+      {
+        path: ':id',
+        component: ServiceComponent,
+        data: {
+          paramBreadcrumb: 'id'
+        }
       }
     ]
   }

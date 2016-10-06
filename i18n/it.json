@@ -38,6 +38,15 @@
       "price": "Prezzo"
     }
   },
+  "service": {
+    "editButton": "Modifica",
+    "price": "Prezzo",
+    "performancesTable": {
+      "title": "Prestazioni",
+      "customer": "Cliente",
+      "date": "Data"
+    }
+  },
   "header": {
     "languageSelection": {
       "language": "Lingua",

@@ -1,0 +1,31 @@
+<div class="row">
+    <div class="col s12">
+        <h5 class="left">{{service.description}}</h5>
+        <a (click)="gotoEdit()" class="waves-effect waves-light btn right"><i class="material-icons right">mode_edit</i>{{ 'service.editButton' | translate }}</a>
+    </div>
+</div>
+<div class="row">
+    <div class="section">
+        <p><span class="bold">{{ 'service.price' | translate }}</span>: {{service.formatted_price}}</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="section">
+        <h5>{{ 'service.performancesTable.title' | translate }}</h5>
+        <table class="col s12 bordered highlight">
+            <thead>
+            <tr>
+                <th>{{ 'service.performancesTable.customer' | translate }}</th>
+                <th>{{ 'service.performancesTable.date' | translate }}</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let performance of service.performances">
+                <td>{{performance.customer.name}} {{performance.customer.surname}} </td>
+                <td>{{performance.date}}</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

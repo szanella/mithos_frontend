@@ -1,3 +1,7 @@
 .icon-clickable, .index-table-row {
   cursor: pointer;
 }
+
+.bold {
+  font-weight: bold;
+}

@@ -4,6 +4,7 @@ import { FormsModule }      from '@angular/forms';
 import { TranslateModule }  from 'ng2-translate/ng2-translate';
 
 import { ServicesComponent }  from './services.component';
+import { ServiceComponent }  from './service/service.component';
 import { ServicesService } from './services.service';
 import { servicesRouting } from './services.routing';
 
@@ -15,13 +16,15 @@ import { servicesRouting } from './services.routing';
     TranslateModule.forRoot()
   ],
   declarations: [
-    ServicesComponent
+    ServicesComponent,
+    ServiceComponent
   ],
   providers: [
     ServicesService
   ],
   exports: [
-    ServicesComponent
+    ServicesComponent,
+    ServiceComponent
   ]
 })
 export class ServicesModule { }

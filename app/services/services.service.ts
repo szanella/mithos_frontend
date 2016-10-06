@@ -20,8 +20,17 @@ export class ServicesService {
       .catch(this.handleError);
   }
 
-private handleError(error: any): Promise<any> {
-  console.error('Error in ServicesService', error);
-return Promise.reject(error.message || error);
-}
+  getService(id: number): Promise<Service> {
+    const url = `${this.servicesUrl}/${id}`;
+    return this.http
+      .get(url)
+      .toPromise()
+      .then(response => response.json().service as Service)
+      .catch(this.handleError);
+  }
+
+  private handleError(error: any): Promise<any> {
+    console.error('Error in ServicesService', error);
+    return Promise.reject(error.message || error);
+  }
 }
