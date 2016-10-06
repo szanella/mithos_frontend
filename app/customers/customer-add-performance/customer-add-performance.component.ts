@@ -36,8 +36,8 @@ export class CustomerAddPerformanceComponent implements OnInit {
         this.services = services;
         // Generate the select input on the next digest cycle
         setTimeout(() => {
-          //noinspection TypeScriptUnresolvedFunction
-          $('select').material_select();
+          // Cast the JQuery object to "any" to prevent syntax errors
+          (<any>$('select')).material_select();
         }, 0);
       });
   }

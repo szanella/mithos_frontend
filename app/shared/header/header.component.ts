@@ -10,8 +10,8 @@ export class HeaderComponent implements OnInit {
   constructor(private translate: TranslateService) { }
 
   ngOnInit(): void {
-    //noinspection TypeScriptUnresolvedFunction
-    $(".dropdown-button").dropdown();
+    // Cast the JQuery object to "any" to prevent syntax errors
+    (<any>$(".dropdown-button")).dropdown();
   }
 
   switchLanguage(language: string): void {
