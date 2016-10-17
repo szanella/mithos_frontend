@@ -7,6 +7,7 @@ import { ServicesComponent }  from './services.component';
 import { ServiceComponent }  from './service/service.component';
 import { ServicesService } from './services.service';
 import { servicesRouting } from './services.routing';
+import { ServiceEditComponent } from "./service-edit/service-edit.component";
 
 @NgModule({
   imports: [
@@ -17,7 +18,8 @@ import { servicesRouting } from './services.routing';
   ],
   declarations: [
     ServicesComponent,
-    ServiceComponent
+    ServiceComponent,
+    ServiceEditComponent
   ],
   providers: [
     ServicesService

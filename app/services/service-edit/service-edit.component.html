@@ -1,0 +1,30 @@
+<div class="row">
+    <form class="col s12">
+        <div class="row">
+            <div class="col s12">
+                <h5 class="left" *ngIf="!isUpdate">{{ 'service.edit.title.add' | translate }}</h5>
+                <h5 class="left" *ngIf="isUpdate">{{ 'service.edit.title.edit' | translate }}</h5>
+                <a (click)="saveService()"><i class="material-icons right medium icon-clickable">done</i></a>
+                <a (click)="goBack()"><i class="material-icons right medium icon-clickable">close</i></a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <input placeholder="{{ 'service.edit.description' | translate }}"
+                       id="description"
+                       name="description"
+                       type="text"
+                       [(ngModel)]="service.description">
+                <label for="description" [class.active]="isUpdate">{{ 'service.edit.description' | translate }}</label>
+            </div>
+            <div class="input-field col s12">
+                <input placeholder="{{ 'service.edit.price' | translate }}"
+                       id="price"
+                       name="price"
+                       type="text"
+                       [(ngModel)]="service.price">
+                <label for="price" [class.active]="isUpdate">{{ 'service.edit.price' | translate }}</label>
+            </div>
+        </div>
+    </form>
+</div>

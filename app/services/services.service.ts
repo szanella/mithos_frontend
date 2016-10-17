@@ -29,6 +29,23 @@ export class ServicesService {
       .catch(this.handleError);
   }
 
+  create(service: Service): Promise<Service> {
+    return this.http
+      .post(this.servicesUrl, JSON.stringify(service), {headers: this.headers})
+      .toPromise()
+      .then(response => response.json().service as Service)
+      .catch(this.handleError);
+  }
+
+  update(service: Service): Promise<Service> {
+    const url = `${this.servicesUrl}/${service.id}`;
+    return this.http
+      .put(url, JSON.stringify(service), {headers: this.headers})
+      .toPromise()
+      .then(response => response.json().service as Service)
+      .catch(this.handleError);
+  }
+
   private handleError(error: any): Promise<any> {
     console.error('Error in ServicesService', error);
     return Promise.reject(error.message || error);

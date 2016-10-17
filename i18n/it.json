@@ -45,6 +45,14 @@
       "title": "Prestazioni",
       "customer": "Cliente",
       "date": "Data"
+    },
+    "edit": {
+      "title": {
+        "add": "Aggiungi Servizio",
+        "edit": "Modifica Servizio"
+      },
+      "description": "Descrizione",
+      "price": "Prezzo"
     }
   },
   "header": {
@@ -66,6 +74,10 @@
       "edit": "Modifica",
       "addPerformance": "Aggiungi Prestazione"
     },
-    "services": "Servizi"
+    "services": "Servizi",
+    "servicesSection": {
+      "add": "Aggiungi",
+      "edit": "Modifica"
+    }
   }
 }

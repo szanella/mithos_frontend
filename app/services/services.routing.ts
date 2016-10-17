@@ -3,6 +3,7 @@ import { Routes, RouterModule }   from '@angular/router';
 
 import { ServicesComponent }     from './services.component';
 import { ServiceComponent } from "./service/service.component";
+import { ServiceEditComponent } from "./service-edit/service-edit.component";
 
 const servicesRoutes: Routes = [
   {
@@ -16,11 +17,31 @@ const servicesRoutes: Routes = [
         component: ServicesComponent
       },
       {
+        path: 'add',
+        component: ServiceEditComponent,
+        data: {
+          breadcrumb: 'breadcrumb.servicesSection.add'
+        }
+      },
+      {
         path: ':id',
-        component: ServiceComponent,
         data: {
           paramBreadcrumb: 'id'
-        }
+        },
+        children: [
+          {
+            path: '',
+            component: ServiceComponent
+          },
+          {
+            path: 'edit',
+            component: ServiceEditComponent,
+            data: {
+              breadcrumb: 'breadcrumb.servicesSection.edit',
+              paramBreadcrumb: ''
+            }
+          }
+        ]
       }
     ]
   }
